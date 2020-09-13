@@ -1307,6 +1307,11 @@
     lodash "^4.5.0"
     prop-types "^15.6.1"
 
+StatusBar@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/StatusBar/-/StatusBar-1.0.0.tgz#26740632a1b93dabb01ea1ddf69a35e8805d8e0f"
+  integrity sha1-JnQGMqG5PauwHqHd9po16IBdjg8=
+
 abort-controller@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
@@ -4415,6 +4420,11 @@ react-native-appearance@~0.3.3:
     fbemitter "^2.1.1"
     invariant "^2.2.4"
     use-subscription "^1.0.0"
+
+react-native-safe-area-context@^3.1.7:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-3.1.7.tgz#fc9e636dfb168f992a2172d363509ce0611a8403"
+  integrity sha512-qSyg/pVMwVPgAy8yCvw349Q+uEUhtRBV33eVXHHkfoou1vCChJxI7SmNR47/6M3BLdjWcyc4lcd018Kx+jhQCw==
 
 react-native-safe-area-context@~3.0.7:
   version "3.0.7"
