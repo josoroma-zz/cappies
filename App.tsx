@@ -1,24 +1,27 @@
-import React from "react";
+import React, { FC } from "react";
+import { Provider as PaperProvider } from "react-native-paper";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 
-export default function App() {
-  return (
-    <SafeAreaProvider>
-      <View style={styles.container}>
-        <Text>Open up App.tsx to start working on your app!</Text>
-        <StatusBar style="auto" />
-      </View>
-    </SafeAreaProvider>
-  );
-}
+import useCachedResources from "./src/hooks/useCachedResources";
+import { AuthNavigator } from "./src/navigators";
+import { theme } from "./src/core/theme";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const App: FC = () => {
+  const isLoadingComplete = useCachedResources();
+
+  if (!isLoadingComplete) {
+    return null;
+  } else {
+    return (
+      <SafeAreaProvider>
+        <PaperProvider theme={theme}>
+          <StatusBar hidden={true} />
+          <AuthNavigator />
+        </PaperProvider>
+      </SafeAreaProvider>
+    );
+  }
+};
+
+export default App;
